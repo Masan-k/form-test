@@ -111,4 +111,12 @@ test</content>
     <date>2025-06-15-Sun</date>
     <content>aaa</content>
   </entry>
+  <entry>
+    <date>2025-06-16-Mon</date>
+    <content>test</content>
+  </entry>
+  <entry>
+    <date>2025-06-16-Mon</date>
+    <content>testettete</content>
+  </entry>
 </diary>
