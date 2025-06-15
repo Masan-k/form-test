@@ -1,4 +1,4 @@
-<?php
+<?php   
 
 $date = $_POST['date'] ?? '';
 $content = $_POST['content'] ?? '';
@@ -44,24 +44,18 @@ $entry->appendChild($contentElem);
 $doc->documentElement->appendChild($entry);
 $doc->save($xmlFile);
 
-echo shell_exec('cd');
-
-// shell_exec('git add diary.xml && git commit -m "update from web UI" && git push origin main');
-
-// echo shell_exec('git add diary.xml');
-//shell_exec('git commit -m "update from web UI"');
-
 echo "保存しました！<br><a href='form.html'>戻る</a>";
 
 $repoPath = 'C:\\inetpub\\wwwroot\\form-entry';
 $git = '"C:\\Program Files\\Git\\cmd\\git.exe"'; // ←正しいパス
-
 $commands = [
     "cd /d $repoPath && $git add diary.xml",
     "cd /d $repoPath && $git commit -m \"update from web UI\"", 
     "cd /d $repoPath && $git push"      
 ];
 
+putenv('HOME=C:\\\\Users\\gituser');
+// echo shell_exec('ssh -T git@github.com');
 foreach ($commands as $cmd) {
     $output = shell_exec($cmd . ' 2>&1');
     echo "<pre><b>Command:</b> $cmd\n$output</pre><hr>";
