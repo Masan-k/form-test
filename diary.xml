@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="diary.xsl"?>
+<diary>
+  <entry>
+    <date>2025-06-16-Mon</date>
+    <content>あああ</content>
+  </entry>
+  <entry>
+    <date>2025-06-30-Mon</date>
+    <content>あとから登録</content>
+  </entry>
+  <entry>
+    <date>2025-06-16-Mon</date>
+    <content>これは改行&#13;
+します</content>
+  </entry>
+  <entry>
+    <date>2025-06-15-Sun</date>
+    <content>test&#13;
+test</content>
+  </entry>
+</diary>
